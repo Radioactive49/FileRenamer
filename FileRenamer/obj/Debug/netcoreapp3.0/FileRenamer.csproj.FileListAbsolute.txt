@@ -1,0 +1,11 @@
+C:\Users\Matyi\Code\FileRenamer\FileRenamer\bin\Debug\netcoreapp3.0\FileRenamer.exe
+C:\Users\Matyi\Code\FileRenamer\FileRenamer\bin\Debug\netcoreapp3.0\FileRenamer.deps.json
+C:\Users\Matyi\Code\FileRenamer\FileRenamer\bin\Debug\netcoreapp3.0\FileRenamer.runtimeconfig.json
+C:\Users\Matyi\Code\FileRenamer\FileRenamer\bin\Debug\netcoreapp3.0\FileRenamer.runtimeconfig.dev.json
+C:\Users\Matyi\Code\FileRenamer\FileRenamer\bin\Debug\netcoreapp3.0\FileRenamer.dll
+C:\Users\Matyi\Code\FileRenamer\FileRenamer\bin\Debug\netcoreapp3.0\FileRenamer.pdb
+C:\Users\Matyi\Code\FileRenamer\FileRenamer\obj\Debug\netcoreapp3.0\FileRenamer.csprojAssemblyReference.cache
+C:\Users\Matyi\Code\FileRenamer\FileRenamer\obj\Debug\netcoreapp3.0\FileRenamer.AssemblyInfoInputs.cache
+C:\Users\Matyi\Code\FileRenamer\FileRenamer\obj\Debug\netcoreapp3.0\FileRenamer.AssemblyInfo.cs
+C:\Users\Matyi\Code\FileRenamer\FileRenamer\obj\Debug\netcoreapp3.0\FileRenamer.dll
+C:\Users\Matyi\Code\FileRenamer\FileRenamer\obj\Debug\netcoreapp3.0\FileRenamer.pdb
