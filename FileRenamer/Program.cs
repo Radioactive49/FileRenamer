@@ -1,17 +1,20 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace FileRenamer
 {
     class Program
     {
+        private static StringBuilder sb = new StringBuilder();
         public int count = 0;
         public static void Main(string[] args)
         {
           
             Console.WriteLine("File Renamer");
-            string path = @"C:\backup\uploads";
+   
+            string path = @"C:\backup\stand-from-tarhely-2";
                 if (File.Exists(path))
                 {
                     // This path is a file
@@ -26,7 +29,8 @@ namespace FileRenamer
                 {
                     Console.WriteLine("{0} is not a valid file or directory.", path);
                 }
-            
+            File.AppendAllText("log.txt", sb.ToString());
+            sb.Clear();
         }
 
         // Process all files in the directory passed in, recurse on any directories 
@@ -56,15 +60,25 @@ namespace FileRenamer
             Ãº - ú
             Ã© - é
             Ã¡ - á
+            aÌ - á
             Ã¼ - ü
             Ã³ - ó
             Ã­ - í
             Ã¶ - ö*/
-            string newName = oldName.Replace("Å‘", "ő").Replace("Å±", "ű").Replace("Ãº", "ú").Replace("Ã©", "é").Replace("Ã¡","á").Replace("Ã¼", "ü").Replace("Ã³", "ó").Replace("Ã¶", "ö").Replace("Ã", "í");
-           if(oldName != newName)
+            string newName = oldName.Replace("â„¢", "™").Replace("Ã","Á").Replace("Å‘", "ő").Replace("oÌ‹", "ő").Replace("Å±", "ű").Replace("Ãº", "ú").Replace("Ã©", "é").Replace("e´","é").Replace("eÌ","é").Replace("Ã¡","á").Replace("aÌ", "á").Replace("Ã¼", "ü").Replace("Ã³", "ó").Replace("Ã¶", "ö").Replace("Ã–","Ö").Replace("o¨","ö").Replace("oÌˆ", "ö").Replace("Ã‰","É").Replace("Ã‰", "É").Replace("Ãš","Ú").Replace("Ãœ", "Ü").Replace("Ã“", "Ó").Replace("Ã•", "Ő").Replace("Ã›", "Ű").Replace("Ã-­", "í").Replace("i´","í").Replace("iÌ","í").Replace("Ã­", "í").Replace("", ""); 
+           if (oldName != newName)
             {
-                Console.WriteLine("File renamed from: "+oldName+" to: "+newName);
-                System.IO.File.Move(oldName, newName);
+                
+                try
+                {
+                    System.IO.File.Move(oldName, newName);
+                    Console.WriteLine("File renamed from: " + oldName + " to: " + newName);
+                    sb.Append("File renamed from: " + oldName + " to: " + newName+'\n');
+                } catch(Exception e)
+                {
+                    sb.Append("Error! Cannot rename File  from: " + oldName + " to: " + newName + e.Message + '\n');
+                    Console.WriteLine("Error! Cannot rename File  from: " + oldName + " to: " + newName+ e.Message);
+                }
             }
         }
     }
